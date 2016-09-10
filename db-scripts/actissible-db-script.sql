@@ -18,8 +18,8 @@
 --
 -- Create actisible_user for DB access
 --
-
-CREATE USER IF NOT EXISTS 'actissible_user'@'%' IDENTIFIED WITH mysql_native_password AS 'Password1';
+DROP USER IF EXISTS 'actissible_user'@'%';
+CREATE USER IF NOT EXISTS 'actissible_user'@'%' IDENTIFIED by 'Password1';
 
 GRANT SELECT, INSERT, UPDATE ON *.* TO 'actissible_user'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 
@@ -38,13 +38,13 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `password` varchar(16) DEFAULT NULL,
   `postal_town` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

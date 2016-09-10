@@ -19,5 +19,22 @@ public class Facilities {
     private String telephoneNumber;
     private String ownershipType;
     private boolean adventure_sport;
+    private boolean athletics;
+    private boolean bowling;
+    private boolean boxing;
+    private boolean cricket;
+    private boolean fitness;
+    private boolean golf;
+    private boolean motorsport;
+    private boolean swimming;
+    private boolean squash_handball;
+    private boolean tennis;
+    private boolean sports_hall;
+    private boolean watersports;
+    private boolean mountain_biking;
+    private boolean pitches_grass;
+    private boolean pitches_water;
+    private boolean pitches_third_gen;
+    private boolean pitches_sand;
 
 }
