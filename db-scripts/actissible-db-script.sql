@@ -18,8 +18,8 @@
 --
 -- Create actisible_user for DB access
 --
-
-CREATE USER IF NOT EXISTS 'actissible_user'@'%' IDENTIFIED WITH mysql_native_password AS 'Password1';
+DROP USER IF EXISTS 'actissible_user'@'%';
+CREATE USER IF NOT EXISTS 'actissible_user'@'%' IDENTIFIED by 'Password1';
 
 GRANT SELECT, INSERT, UPDATE ON *.* TO 'actissible_user'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 
