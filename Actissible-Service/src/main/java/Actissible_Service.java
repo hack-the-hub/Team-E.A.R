@@ -1,4 +1,4 @@
-import Database.mappers.FacitiesDAO;
+import Database.FacitiesDAO;
 import Resources.FacilitiesResource;
 import Services.FacilitiesService;
 import io.dropwizard.Application;
@@ -48,7 +48,7 @@ public class Actissible_Service extends Application<Config> {
         FacitiesDAO facitiesDAO = jdbi.onDemand(FacitiesDAO.class);
 
         //services
-        FacilitiesService facilitiesService = new FacilitiesService(facitiesDAO);
+        FacilitiesService facilitiesService = new FacilitiesService(facitiesDAO, jdbi.open());
 
         //resources
         FacilitiesResource facilitiesResource = new FacilitiesResource(facilitiesService);

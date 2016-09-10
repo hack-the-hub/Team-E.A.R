@@ -1,6 +1,8 @@
-package Database.mappers;
+package Database;
 
+import Database.mappers.FacilitiesMapper;
 import Domain.Facilities;
+import org.skife.jdbi.v2.sqlobject.Bind;
 import org.skife.jdbi.v2.sqlobject.SqlQuery;
 import org.skife.jdbi.v2.sqlobject.customizers.RegisterMapper;
 
