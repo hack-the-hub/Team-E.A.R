@@ -4,4 +4,28 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
 
+    <servlet>
+        <servlet-name>proxy</servlet-name>
+        <servlet-class>Proxy</servlet-class>
+        <init-param>
+            <param-name>ProxyTo</param-name>
+            <param-value>http://localhost:8080/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>Prefix</param-name>
+            <param-value>/api</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>threadsAllowed</param-name>
+            <param-value>1</param-value>
+        </init-param>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>proxy</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+
 </web-app>

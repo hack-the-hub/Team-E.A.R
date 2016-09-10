@@ -1,0 +1,12 @@
+server:
+  applicationConnectors:
+    - type : http
+      port : 8080
+  adminConnectors:
+    - type : http
+      port : 8081
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user: actissible_user
+  password: Password1
+  url: jdbc:mysql://localhost/actissible_db
