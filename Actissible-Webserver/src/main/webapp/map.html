@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html ng-app="ngMap">
-<head>
-    <title>Simle Map</title>
-    <meta name="description" content="Simple Map">
-    <meta name="keywords" content="ng-map,AngularJS,center">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-</head>
 
-<body>
-<ng-map center="[40.74, -74.18]"></ng-map>
-</body>
+<html ng-app="myapp" ng-controller="mapCtrl as map" ng-init="map.init()">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCQN9TZIOlzsyzSLWM5MFgvTKHSNSLGtHI"></script>
+
+  </head>
+  <body>
+
+    <div class="toggles">
+      <input type="checkbox" name="name" value="Swimming" ng-click="map.toggleField('swimming')">Swimming
+      <input type="checkbox" name="name" value="Golf" ng-click="map.toggleField('golf')">Golf
+      <input type="checkbox" name="name" value="Fitness" ng-click="map.toggleField('fitness')">Fitness
+      <input type="checkbox" name="name" value="Tennis" ng-click="map.toggleField('tennis')">Tennis
+      <input type="checkbox" name="name" value="Football" ng-click="map.toggleField('pitches_grass')">Football
+      <input type="checkbox" name="name" value="Boxing" ng-click="map.toggleField('boxing')">Boxing
+
+    </div>
+
+    <div id="map" style="height:400px; width: 400px;"></div>
+    <a href="#" ng-click="ctrl.openInfoWindow($event, marker)">{{marker.title}}</a>
+
+    <script src="/includes/js/angular.min.js"></script>
+    <script src="/includes/js/angular-resource.min.js"></script>
+    <script src="/includes/js/MapController.js"></script>
+    <script src="/includes/js/FacilitiesResource.js"></script>
+
+  </body>
 </html>
