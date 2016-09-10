@@ -28,11 +28,11 @@ GRANT SELECT, INSERT, UPDATE ON *.* TO 'actissible_user'@'%' REQUIRE NONE WITH M
 -- Table structure for table `comments`
 --
 
-DROP DATABASE IF EXISTS 'actissible_db';
+DROP DATABASE IF EXISTS actissible_db;
 
-CREATE DATABASE 'actissible_db';
+CREATE DATABASE actissible_db;
 
-USE 'actissible_db';
+USE actissible_db;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -64,8 +64,7 @@ CREATE TABLE `comments` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(50) NOT NULL,
   `content` text NOT NULL,
-  PRIMARY KEY (`comment_id`),
-  FOREIGN KEY (email) REFERENCES users(email)
+  PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
