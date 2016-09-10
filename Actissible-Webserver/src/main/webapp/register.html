@@ -49,7 +49,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
 
-                    li><a href="/">Home</a></li>
+                    <li><a href="/">Home</a></li>
 
                     <li><a href="/list.html">Locations</a></li>
 
@@ -67,26 +67,45 @@
 
     </nav>
 
-<div class="container">
+    <div class="top-align" style="display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;">
+        <div class="middle-align" style="display: table-cell;
+    vertical-align: middle;">
 
-    <form id="registration" action="#"">
-        <label for="username">Username</label>
-        <input id="username" type="text" placeholder="Username">
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Password">
-        <label for="post-town">Postal town</label>
-        <input id="post-town" type="text" placeholder="Post town">
-        <input id="submit" type="submit" value="Post town">
-    </form>
+            <div class="bottom-align" style="margin-left: auto;
+    margin-right: auto;">
+                <div>
+                    <div class="container jumbotron" style="display: block; margin: auto; width: 50%;">
+
+                        <img src="includes/img/logo.png" style="width: 25%; display: block; margin: 0 auto;"/>
+
+                        <form id="login-form" class="form-group" style="width: 50%; margin: auto;">
+                            <input id="name" type="text" placeholder="name" class="form-control"
+                                   style="margin-top: 50px;">
+                            <input id="email" type="text" placeholder="email" class="form-control"
+                                   style="margin-top: 25px;">
+                            <input id="password" type="password" placeholder="password" class="form-control"
+                                   style="margin-top: 25px;">
+                            <input id="post-town" type="text" placeholder="post town" class="form-control"
+                                    style="margin-top: 25px;">
+
+                            <input id="submit" type="submit" value="Register" src="#" class="form-control"
+                                   style="margin-top: 50px;">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="includes/js/jquery.js"></script>
+
+    <script src="includes/js/bootstrap.min.js"></script>
+
+    <script src="includes/js/angular.min.js"></script>
 
 </div>
-
-<script src="includes/js/jquery.js"></script>
-
-<script src="includes/js/bootstrap.min.js"></script>
-
-<script src="includes/js/angular.min.js"></script>
-
 </body>
 
 </html>
