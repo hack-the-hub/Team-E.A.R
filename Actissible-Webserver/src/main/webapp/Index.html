@@ -1,122 +1,105 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Actissible</title>
+  <head>
 
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQivt-DnzZMhMX7rJ_gnypR6RJAYEOF04&callback=mapOptions">
-    </script>
-    <link rel="stylesheet" href="/index.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <title>actissible</title>
 
+    <meta name="viewport" content="width=500, initial-scale=1">
 
+    <link rel="stylesheet" type="text/css" href="includes/css/bootstrap.min.css" />
 
+    <link rel="stylesheet" type="text/css" href="includes/css/style.css" />
 
-</head>
-<div ng-app="myapp" ng-controller="mapController as mappy" ng-init="mappy.init()">
+  </head>
 
-<div>
-
-    <h1>Actissible placeholder for logo</h1>
-
-    <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-    </ol>
-
-
-</div>
-
+  <body>
 
     <div class="header">
 
-        <input type="text" class="form-control" placeholder="Search your area">
+      <nav class="navbar navbar-default">
+
+        <div class="container">
+
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                    <span class="sr-only">Toggle navigation</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                  </button>
+
+            <a href="#" class="navbar-brand">
+
+              <img src="includes/img/logo.png" height="50px " />
+
+            </a>
+
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+
+              <li><a href="#">Home</a></li>
+
+              <li><a href="#">Locations</a></li>
+
+              <li><a href="#">Login</a></li>
+
+              <li><a href="#">Register</a></li>
+
+              <li><a href="#">Contact</a></li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+      <div class="banner">
+
+        <div class="container">
+
+          <form class="banner_search" name="search">
+
+            <h1>NOW IS THE TIME</h1>
+
+            <h3>TO GET MORE ACTIVE IN NORTHERN IRELAND</h3>
+
+            <div class="banner_container">
+
+              <div class="seventy"><input type="text" class="form-control" placeholder="Enter your postcode" /></div>
+
+              <div class="thirty"><input type="submit" class="btn btn-custom" value="Search" /></div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <hr/>
-
-    <div class="row">
-        <div class="col s6 m6">
-            <div class="card blue darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Swimming</span>
-                    <p>.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s6 m6">
-            <div class="card red darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Athletics</span>
-                    <p>.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s6 m6">
-            <div class="card green darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Soccer</span>
-                    <p>.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
 
 
-    <hr/>
+    <script src="includes/js/jquery.js"></script>
 
+    <script src="includes/js/bootstrap.min.js"></script>
 
+    <script src="includes/js/angular.min.js"></script>
 
+  </body>
 
-    <h2>This is some data being pulled from the API</h2>
-
-    <h3 ng-repeat="x in mappy.test">{{x.POST_CODE}}</h3>
-
-
-
-    <div id="map"></div>
-    <div id="class" ng-repeat="marker in mappy.markers | orderBy : 'title'">
-        <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
-    </div>
-
-
-</div>
-
-
-
-<script type="text/javascript" src="/angular.min.js"></script>
-<script type="text/javascript" src="/angular-resource.min.js"></script>
-<script type="text/javascript" src="/MapController.js"></script>
-
-</body>
 </html>

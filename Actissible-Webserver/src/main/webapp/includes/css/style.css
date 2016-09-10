@@ -6,6 +6,7 @@
 .navbar {
   line-height: 150px;
   background: #fff;
+  margin-bottom: 0px;
 }
 
 .navbar-brand {
@@ -19,4 +20,82 @@
 
 .navbar-toggle {
   margin-top: 33px;
+}
+
+.navbar-nav>li>a {
+  transition: 300ms ease-in-out;
+  color: #555555 !important;
+}
+
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus, .navbar-nav>li>a:active {
+  color: #3c9adc !important;
+}
+
+.banner {
+  width: 100%;
+  background: url("../img/overlay.png"), url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 110px 0px 130px 0px;
+}
+
+.banner_search {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.banner_container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.banner_container h1 {
+  margin-bottom: 20px !important;
+}
+
+.seventy {
+  width: 70%;
+  float: left;
+}
+
+.thirty {
+  width: 30%;
+  float: left;
+}
+
+.seventy input {
+  width: 100%;
+  border-radius: 4px 0px 0px 4px !important;
+  border: none;
+  height: 50px;
+  padding: 20px;
+}
+
+.thirty input {
+  width: 100% !important;
+  border-radius: 0px 4px 4px 0px !important;
+  border: none;
+  height: 50px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.thirty input {
+  width: 100% !important;
+  border-radius: 0px 4px 4px 0px !important;
+  border: none;
+  height: 50px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.thirty input:hover {
+  background: #40a6ee;
+  color: #fff;
+}
+
+.btn-custom {
+  background-color: #3c9adc;
 }
