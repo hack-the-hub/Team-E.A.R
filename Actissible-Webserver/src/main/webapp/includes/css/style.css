@@ -184,3 +184,19 @@ body {
 @media screen and (max-width: 767px) {
   .navbar-right { margin: 15px 0px; }
 }
+
+.golfingheader {
+  width: 100%;
+  height: 800px;
+  background: url('http://elgoletoapartments.com/wp-content/uploads/2014/05/golfer-box-2.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.swimmingheader {
+  width: 100%;
+  height: 800px;
+  background: url('  http://www.historicdodgertown.com/images/interface/backgrounds/cust_bg_87_1399620442455.jpg');
+  background-size: cover;
+  background-position: center center;
+}
