@@ -7,6 +7,9 @@
 
     <title>Actissible</title>
 
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQivt-DnzZMhMX7rJ_gnypR6RJAYEOF04&callback=mapOptions">
+    </script>
     <link rel="stylesheet" href="/index.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -15,11 +18,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
 
 
 
 </head>
-<body ng-app="myapp" ng-controller="mapController as mappy" ng-init="mappy.init()">
+<div ng-app="myapp" ng-controller="mapController as mappy" ng-init="mappy.init()">
 
 <div>
 
@@ -41,10 +47,70 @@
 
     </div>
 
+    <hr/>
+
+    <div class="row">
+        <div class="col s6 m6">
+            <div class="card blue darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Swimming</span>
+                    <p>.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6 m6">
+            <div class="card red darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Athletics</span>
+                    <p>.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6 m6">
+            <div class="card green darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Soccer</span>
+                    <p>.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <hr/>
+
+
+
+
     <h2>This is some data being pulled from the API</h2>
 
     <h3 ng-repeat="x in mappy.test">{{x.POST_CODE}}</h3>
 
+
+
+    <div id="map"></div>
+    <div id="class" ng-repeat="marker in mappy.markers | orderBy : 'title'">
+        <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+    </div>
+
+
+</div>
 
 
 
